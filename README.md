@@ -16,17 +16,33 @@
 
 ### 환경 설정
 
-    git clone https://github.com/Kdoby/Summarization_AI
+- vscode에서 https://github.com/Kdoby/Summarization_AI 레포지토리 복제
+- vscode extensions에 python 설치
 
-    -- fastAPI (패키지 파일은 가상환경에 설치) --
-    .venv\Scripts\activate # 가상환경 활성화 (Windows PowerShell)
-    source .venv/bin/activate # 가상환경 활성화 (MacOS bash)
-    pip install transformers
-    pip install torch torchvision torchaudio
-    pip install nltk
-    -- run (#port:8000) --
-    .venv\Scripts\activate
-    uvicorn [파일명]:app --host 0.0.0.0 --port 8000 --reload
+       -- 가상 환경 생성 --
+       # Windows
+       python -m venv .venv
+       # Mac
+       python3 -m venv .venv
+       ctrl + shift + p > Python: Select Interpreter 에서 .venv의 python.exe 선택
+  
+       -- 가상 환경 활성화 --
+        # Windows PowerShell
+        .venv\Scripts\activate
+        # MacOS bash
+        source .venv/bin/activate
+
+        -- 패키지 파일 설치 --
+        pip install transformers
+        pip install torch torchvision torchaudio
+        pip install fastapi[all]
+        pip install uvicorn
+  
+        -- run (#port:8000) --
+        .venv\Scripts\activate
+        uvicorn bart_large_cnn_samsum:app --host 0.0.0.0 --port 8000 --reload
+
+        
 
 ## Acknowledgements
 
