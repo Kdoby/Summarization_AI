@@ -19,5 +19,5 @@ async def summarize_message(message: Message):
         "Do not use 'will'.\n\n"
         f"{message.text}"
     )
-    summary = summarizer(prompt, max_length=60, min_length=10, do_sample=False)
+    summary = summarizer(prompt, max_length=150, min_length=10, do_sample=False)
     return {"summary": summary[0]['summary_text']}  
