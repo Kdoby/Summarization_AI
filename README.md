@@ -39,7 +39,7 @@
         pip install uvicorn
   
         -- run (#port:8000) --
-        .venv\Scripts\activate
+        .venv\Scripts\activate (활성화 안 된 경우에만)
         uvicorn bart_large_cnn_samsum:app --host 0.0.0.0 --port 8000 --reload
 
         
